@@ -41,7 +41,7 @@ h1.text-center.bg-danger{
 	align-items: start;
 }
 
-.main-col{
+.main{
 	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
 	padding: 1.25rem;
 	border-radius: 10px;
@@ -49,7 +49,7 @@ h1.text-center.bg-danger{
 	min-height: 220px;
 }
 
-.side-col{
+.side{
 	background: var(--card);
 	padding: 1rem;
 	border-radius: 10px;
@@ -59,11 +59,11 @@ h1.text-center.bg-danger{
 	border: 1px solid rgba(255,255,255,0.03);
 }
 
-.side-col h3{margin-top:0;color:var(--accent);}
+.side h3{margin-top:0;color:var(--accent);}
 
 /* Image styling */
-.main-col img,
-.side-col img{
+.main img,
+.side img{
 	width:100%;
 	height:auto;
 	display:block;
@@ -92,8 +92,8 @@ h1.text-center.bg-danger{
 footer, #footer{color:#e9eef6}
 
 /* Hover effects */
-.nav-link{transition: color 180ms ease, transform 160ms ease;}
-.nav-link:hover{color:var(--accent);transform:translateY(-1px)}
+/* .nav-link{transition: color 180ms ease, transform 160ms ease;}
+.nav-link:hover{color:var(--accent);transform:translateY(-1px)} */
 
 /* JSON debug block (if used) */
 /* pre.json{background:#071022;padding:1rem;border-radius:8px;overflow:auto;color:#bfe6ff} */
