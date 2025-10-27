@@ -1,0 +1,102 @@
+/* Global layout and theme for the Solar System site */
+:root{
+	--brand-red: #dc3545;
+	--muted: #6c757d;
+	--bg: #0b1220;
+	--card: #0f1724;
+	--accent: #ffd54d;
+}
+
+*{box-sizing: border-box;}
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+	background: linear-gradient(180deg, var(--bg) 0%, #08101a 100%);
+	color: #e9eef6;
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Page header (the big red title) */
+h1.text-center.bg-danger{
+	background: var(--brand-red) !important;
+	color: #fff !important;
+	font-weight:700;
+	letter-spacing:0.6px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Main two-column layout used by views */
+.page{
+	padding: 1.5rem 1rem 3rem 1rem;
+	max-width: 1100px;
+	margin: 1.5rem auto;
+}
+
+.content{
+	display: grid; /* uses CSS Grid */
+	grid-template-columns: 1fr 320px; /* left content + right sidebar */
+	gap: 1.25rem; /* spacing between columns */
+	align-items: start;
+}
+
+.main-col{
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	padding: 1.25rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 14px rgba(2,6,23,0.6);
+	min-height: 220px;
+}
+
+.side-col{
+	background: var(--card);
+	padding: 1rem;
+	border-radius: 10px;
+	color: #cfe3ff;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	border: 1px solid rgba(255,255,255,0.03);
+}
+
+.side-col h3{margin-top:0;color:var(--accent);}
+
+/* Image styling */
+.main-col img,
+.side-col img{
+	width:100%;
+	height:auto;
+	display:block;
+	border-radius:8px;
+	object-fit:cover; /* ensures nice cropping */
+	border: 1px solid rgba(255,255,255,0.06);
+}
+
+.muted{color:var(--muted);}
+
+/* Info list */
+.facts{list-style:none;padding:0;margin:0;}
+.facts li{padding:0.35rem 0;border-bottom:1px dashed rgba(255,255,255,0.03);} 
+
+/* Responsive adjustments */
+@media (max-width: 880px){
+	.content{grid-template-columns: 1fr;}
+	.page{padding:1rem}
+}
+
+/* Small utility classes */
+.lead{font-size:1.05rem;color:#dbe9ff}
+.caption{font-size:0.9rem;color:var(--muted);}
+
+/* Footer tweaks to ensure contrast */
+footer, #footer{color:#e9eef6}
+
+/* Hover effects */
+.nav-link{transition: color 180ms ease, transform 160ms ease;}
+.nav-link:hover{color:var(--accent);transform:translateY(-1px)}
+
+/* JSON debug block (if used) */
+/* pre.json{background:#071022;padding:1rem;border-radius:8px;overflow:auto;color:#bfe6ff} */
+
+/* end of styles */
+
